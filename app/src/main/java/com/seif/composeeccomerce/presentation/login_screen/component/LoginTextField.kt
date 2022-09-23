@@ -7,8 +7,8 @@ import androidx.compose.runtime.Composable
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun LoginTextField(value: String, onValueChanged: () -> Unit, hint: String) {
+fun LoginTextField(value: String, onValueChanged: (value:String) -> Unit, hint: String) {
 
-    OutlinedTextField(value = value, onValueChange = { onValueChanged() },
+    OutlinedTextField(value = value, onValueChange = { onValueChanged(value) },
         label = { Text(text = hint) })
 }

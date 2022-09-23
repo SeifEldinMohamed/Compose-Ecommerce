@@ -9,6 +9,6 @@ import androidx.compose.runtime.Composable
 @Composable
 fun LoginTextField(value: String, onValueChanged: (value:String) -> Unit, hint: String) {
 
-    OutlinedTextField(value = value, onValueChange = { onValueChanged(value) },
+    OutlinedTextField(value = value, onValueChange = { onValueChanged(it) },
         label = { Text(text = hint) })
 }
